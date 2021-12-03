@@ -1,0 +1,14 @@
+import time
+from random import randint
+l=[randint(-200,200) for i in range (1000)]
+l=sorted(l)
+start=time.time()
+def lin_find(arrey,k):
+    for i in range(len(arrey)):
+        if (arrey[i]==k):
+            return i 
+end=time.time()
+n=0
+print(l)
+print(lin_find(l,n))
+print(end-start)
