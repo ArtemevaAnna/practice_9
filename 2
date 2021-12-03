@@ -1,0 +1,21 @@
+import time
+def find(lst,x):
+    left = 0
+    right = len(lst) - 1
+    while left<=right:
+        y = (left + right)//2
+        if lst[y] == x:
+            return y
+        if lst[y]<x:
+            left = y + 1
+        elif lst[y]>x:
+            right = y - 1
+lst = []
+for i in range (-3,3):
+    lst.append(i)
+x = -2
+print(lst)
+start = time.time()            
+print(find(lst,x))
+end = time.time()
+print (end-start)
